@@ -10,7 +10,7 @@
             <p>Wingspan: {{ finch.wingspan }}</p>
             <p>Weight: {{ finch.weight }}</p>
             <hr>
-            <a href="/finches/{{ finch.id }}">View {{ finch.name }}</a>
+            <a href="{% url 'detail' finch.id %}">View {{ finch.name }}</a>
         </div>
     </div>
 {% endfor %}
