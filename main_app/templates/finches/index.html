@@ -4,12 +4,16 @@
 <h1>Finch List</h1>
 
 {% for finch in finches %}
-    <div class="card">
-        <div class="card-content">
+    <div class="card small">
+        <div class="card-image">
+            <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRT0fuYJ33kuGhuxWMvYnK--oQmg_rAzZqI8eAuSSJZ7KIf7q-w_oKysr2ElK8mZyfv2nCvFWI0hIyjj74" alt="{{finch.name}}">
             <span class="card-title">{{ finch.name }}</span>
+        </div>
+        <div class="card-content">
             <p>Wingspan: {{ finch.wingspan }}</p>
             <p>Weight: {{ finch.weight }}</p>
-            <hr>
+        </div>
+        <div class="card-action">
             <a href="{% url 'detail' finch.id %}">View {{ finch.name }}</a>
         </div>
     </div>
