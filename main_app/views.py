@@ -64,11 +64,11 @@ def unassoc_food(request, finch_id, food_id):
 
 class FoodList(ListView):
     model = Food
-    template = 'foods/index.html'
+    template_name = 'foods/index.html'
 
 class FoodDetail(DetailView):
     model = Food
-    template = 'foods/detail.html'
+    template_name = 'foods/detail.html'
 
 class FoodCreate(CreateView):
     model = Food
