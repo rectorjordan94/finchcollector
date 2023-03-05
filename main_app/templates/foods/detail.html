@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block content %} 
+    <h1>Food Details</h1>
+
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">
+                A <span style="color: {{food.color}}">{{food.color}}</span> {{food.name}}
+            </span>
+        </div>
+        <div class="card-action">
+            <a class="btn" href="{% url 'foods_update' food.id %}">Edit</a>
+            <a class="btn red" href="{% url 'foods_delete' food.id %}">Delete</a>
+        </div>
+    </div>
+
+{% endblock %}
